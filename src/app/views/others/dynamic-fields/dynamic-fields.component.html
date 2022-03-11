@@ -1,0 +1,486 @@
+<mat-card class="p-0">
+
+    <br>
+    <form [formGroup]="dynamicFieldForm" (ngSubmit)="onSubmit()">
+        <mat-card-content>
+
+            <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="space-between center">
+                <!-- *ngIf="isActivepermissions.some(item => item.code === fn)" color ="warn"-->
+                <div fxFlex="30" *ngIf="isActive('fn')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>First Name</mat-label>
+                            <input matInput id="firstName" formControlName="firstname" type="text" value=""
+                                placeholder="First Name">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('mn')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Middle Name</mat-label>
+                            <input matInput id="middleName" formControlName="middlename" type="text" value=""
+                                placeholder="Middle Name ">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('ln')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput id="lastName" formControlName="lastname" type="text" value=""
+                                placeholder="Last Name ">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('mob')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Mobile Number</mat-label>
+                            <input matInput id="mobileNum" formControlName="mobileNum" type="text" value=""
+                                placeholder="Mobile Number">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('email')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Email Id</mat-label>
+                            <input matInput id="emailid" formControlName="emailid" type="text" value=""
+                                placeholder="Email Id">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('dob')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Date of Birth</mat-label>
+                            <input matInput id="dateofBirth" formControlName="dateofBirth" type="text" value=""
+                                placeholder="Date of Birth">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('pob')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Place Of Birth</mat-label>
+                            <input matInput id="placeOfBirth" formControlName="placeOfBirth" type="text" value=""
+                                placeholder="Place Of Birth">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('resType')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Residence Type</mat-label>
+                            <input matInput id="residenceType" formControlName="residenceType" type="text" value=""
+                                placeholder="Residence Type">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('gr')">
+                    <div class="pb-1" class="radioButton">
+                        <mat-radio-group formControlName="gender" aria-label="Select an option">
+                            <mat-radio-button value="male">Male</mat-radio-button>
+                            <mat-radio-button value="female">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+                <div fxFlex="30" *ngIf="isActive('qa')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Qualification</mat-label>
+                            <input matInput id="qualification" formControlName="qualification" type="text" value=""
+                                placeholder="Qualification">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('yop')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Year of Passing</mat-label>
+                            <input matInput id="yearOfPassing" formControlName="yearOfPassing" type="text" value=""
+                                placeholder="Year Of Passing">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('des')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Designation</mat-label>
+                            <input matInput id="designation" formControlName="designation" type="text" value=""
+                                placeholder="Designation">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('cif')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Cif Number</mat-label>
+                            <input matInput id="cifNumber" formControlName="cifNumber" type="text" value=""
+                                placeholder="Cif Number">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('idNum')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Id Number</mat-label>
+                            <input matInput id="idNumber" formControlName="idNumber" type="text" value=""
+                                placeholder="Id Number">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div fxFlex="30" *ngIf="isActive('id')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Id Type</mat-label>
+                            <input matInput id="idType" formControlName="idType" type="text" value=""
+                                placeholder="Id Type">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('exDate')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Expiry Date</mat-label>
+                            <input matInput id="expiryDate" formControlName="expiryDate" type="text" value=""
+                                placeholder="Expiry Date">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('cor')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Country Of Residence</mat-label>
+                            <input matInput id="countryOfResidence" formControlName="countryOfResidence" type="text"
+                                value="" placeholder="Country Of Residence">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('nat')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Nationality</mat-label>
+                            <input matInput id="nationality" formControlName="nationality" type="text" value=""
+                                placeholder="Nationality">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('occType')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Occupation Type</mat-label>
+                            <input matInput id="nationality" formControlName="occupationType" type="text" value=""
+                                placeholder="occupationType">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div fxFlex="30" *ngIf="isActive('build')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Building</mat-label>
+                            <input matInput id="building" formControlName="building" type="text" value=""
+                                placeholder="Building">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('str')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Street</mat-label>
+                            <input matInput id="street" formControlName="street" type="text" value=""
+                                placeholder="Street">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('local')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Locality</mat-label>
+                            <input matInput id="locality" formControlName="locality" type="text" value=""
+                                placeholder="Locality">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div fxFlex="30" *ngIf="isActive('cy')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>City</mat-label>
+                            <input matInput id="city" formControlName="city" type="text" value="" placeholder="City">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('st')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>State</mat-label>
+                            <input matInput id="state" formControlName="state" type="text" value="" placeholder="State">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('coy')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-select name="countryReactiveVaraible" formControlName="country" placeholder="Country">
+                                <mat-option *ngFor="let country of countries" [value]="country.short">
+                                    {{country.full}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('zip')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Zip Code</mat-label>
+                            <input matInput id="zipCode" formControlName="zipCode" type="text" value=""
+                                placeholder="Zip Code">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('altermob')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Alternate Mobile Number</mat-label>
+                            <input matInput id="alternateMob" formControlName="alternateMob" type="text" value=""
+                                placeholder="Alternate Mobile Number">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('addr1')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Address1</mat-label>
+                            <textarea matInput formControlName="address1" name="Address" cols="35" rows="4"
+                                placeholder="Address1"></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div fxFlex="30" *ngIf="isActive('addr2')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Address2</mat-label>
+                            <textarea matInput formControlName="address2" name="Address" cols="35" rows="4"
+                                placeholder="Address2"></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('addr3')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Address3</mat-label>
+                            <textarea matInput formControlName="address3" name="Address" cols="35" rows="4"
+                                placeholder="Address3"></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('totalIncome')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Applicant Total Income</mat-label>
+                            <input matInput id="applicantTotalIncome" formControlName="applicantTotalIncome" type="text"
+                                value="" placeholder="Applicant Total Income">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('totalExpense')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Applicant Total Expense</mat-label>
+                            <input matInput id="applicantTotalExpense" formControlName="applicantTotalExpense"
+                                type="text" value="" placeholder="Applicant Total Expense">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('empType')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Employment Type</mat-label>
+                            <input matInput id="employmentType" formControlName="employmentType" type="text" value=""
+                                placeholder="Employment Type">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div fxFlex="30" *ngIf="isActive('empcat')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Employment Category</mat-label>
+                            <input matInput id="employmentCategory" formControlName="employmentCategory" type="text"
+                                value="" placeholder="Employment Category">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('empNum')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Employee Number</mat-label>
+                            <input matInput id="employeeNumber" formControlName="employeeNumber" type="text" value=""
+                                placeholder=" Employee Number">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('office')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Office Name</mat-label>
+                            <input matInput id="officeName" formControlName="officeName" type="text" value=""
+                                placeholder=" Office Name">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('startDate')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Employment Start Date</mat-label>
+                            <input matInput id="employmentStartDate" formControlName="employmentStartDate" type="text"
+                                value="" placeholder=" Employment Start Date">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('endDate')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Employment End Date</mat-label>
+                            <input matInput id="employmentEndDate" formControlName="employmentEndDate" type="text"
+                                value="" placeholder=" Employment End Date">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('sal')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Salary</mat-label>
+                            <input matInput id="salary" formControlName="salary" type="text" value=""
+                                placeholder="Salary">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('intIncome')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Interest Income</mat-label>
+                            <input matInput id="salary" formControlName="interestIncome" type="text" value=""
+                                placeholder="Interest Income">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('bon')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Bonus</mat-label>
+                            <input matInput id="bonus" formControlName="bonus" type="text" value="" placeholder="Bonus">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('cashG')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Cash Gifts</mat-label>
+                            <input matInput id="cashGifts" formControlName="cashGifts" type="text" value=""
+                                placeholder="Cash Gifts">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('bus')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Business</mat-label>
+                            <input matInput id="business" formControlName="business" type="text" value=""
+                                placeholder="Business">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('pen')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Pension</mat-label>
+                            <input matInput id="pension" formControlName="pension" type="text" value=""
+                                placeholder="Pension">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('monthlyIncome')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Monthly Income Rentals</mat-label>
+                            <input matInput id="monthlyIncomeRentals" formControlName="monthlyIncomeRentals" type="text"
+                                value="" placeholder="Monthly Income Rentals">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('incomeOthers')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Monthly Income Others</mat-label>
+                            <input matInput id="monthlyIncomeOthers" formControlName="monthlyIncomeOthers" type="text"
+                                value="" placeholder="monthly Income Others">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('incomeTotal')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Monthly Income Total</mat-label>
+                            <input matInput id="monthlyIncomeTotal" formControlName="monthlyIncomeTotal" type="text"
+                                value="" placeholder="monthly Income Total">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('savings')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Saving Deposits</mat-label>
+                            <input matInput id="savingDeposits" formControlName="savingDeposits" type="text" value=""
+                                placeholder="Saving Deposits">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('property')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Properties</mat-label>
+                            <input matInput id="properties" formControlName="properties" type="text" value=""
+                                placeholder="Properties">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('asstsTotal')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Asset Total</mat-label>
+                            <input matInput id="assetTotal" formControlName="assetTotal" type="text" value=""
+                                placeholder="Asset Total">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex="30" *ngIf="isActive('fixedDep')">
+                    <div class="pb-1">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Fixed Deposits</mat-label>
+                            <input matInput id="fixedDeposits" formControlName="fixedDeposits" type="text" value=""
+                                placeholder="Fixed Deposits">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <br>
+                <button mat-raised-button [disabled]="!dynamicFieldForm.valid" color="primary"
+                    type="submit">Submit</button>
+            </div>
+        </mat-card-content>
+        <br>
+        <div *ngIf="payLoad" class="form-row">
+            <strong>Saved the following values</strong><br>{{payLoad}}
+        </div>
+    </form>
+
+</mat-card>

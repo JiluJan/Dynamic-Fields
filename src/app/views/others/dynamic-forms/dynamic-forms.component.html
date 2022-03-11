@@ -1,0 +1,91 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100">
+    <mat-card class="p-0">
+      <mat-toolbar color="primary">
+        <span class="fill-remaining-space">Form with Fields</span>
+      </mat-toolbar>
+      <br>
+      <form [formGroup]="permissionForm" (ngSubmit)="onSubmit()">
+        <mat-card-content class="spacing">
+          <div formGroupName="userData">
+            <div>
+              <div fxFlex="100" fxFlex.gt-xs="30" class="pr-1">
+                <div class="pb-1">
+                  <mat-form-field color="warn" appearance="outline" *ngIf="permissions.field1">
+                    <mat-label>First Name</mat-label>
+                    <input matInput id="firstName" formControlName="firstName" type="text" value=""
+                      placeholder="First Name">
+                  </mat-form-field>
+                </div>
+                <div class="pb-1">
+                  <mat-form-field color="warn" appearance="outline" *ngIf="permissions.field2">
+                    <mat-label>Mobile Number</mat-label>
+                    <input matInput id="mobileNum" formControlName="mobileNum" type="text" value=""
+                      placeholder="Mobile Number">
+                  </mat-form-field>
+                </div>
+                <div class="pb-1">
+                  <mat-form-field color="warn" appearance="outline" *ngIf="permissions.field3">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="address" name="Address" cols="35" rows="8"
+                      placeholder="Question Text" [(ngModel)]="Address" required></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex="100" fxFlex.gt-xs="30" class="pr-1">
+                <div class="pb-1">
+                  <mat-form-field color="warn" appearance="outline" *ngIf="permissions.field4">
+                    <mat-label>Middle Name</mat-label>
+                    <input matInput id="middleName" formControlName="middleName" type="text" value=""
+                      placeholder="Middle Name ">
+                  </mat-form-field>
+                </div>
+                <div class="pb-1">
+                  <mat-form-field color="warn" appearance="outline" *ngIf="permissions.field5">
+                    <mat-label>Email Id</mat-label>
+                    <input matInput id="email" formControlName="email" type="text" value="" placeholder="Email Id">
+                  </mat-form-field>
+                </div>
+                <div class="pb-1">
+                  <mat-form-field appearance="outline" *ngIf="permissions.field6">
+                    <mat-select name="countryReactiveVaraible" formControlName="country" placeholder="Country">
+                      <mat-option *ngFor="let country of countries" [value]="country.short">
+                        {{country.full}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxFlex="100" fxFlex.gt-xs="30" class="pr-1">
+                <div class="pb-1">
+                  <mat-form-field color="warn" appearance="outline" *ngIf="permissions.field7">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput id="lastName" formControlName="lastName" type="text" value=""
+                      placeholder="Last Name ">
+                  </mat-form-field>
+                </div><br>
+                <div class="pb-1">
+                  <mat-radio-group formControlName="gender" aria-label="Select an option" *ngIf="permissions.field8">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <div>
+            <br>
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+          </div>
+        </mat-card-content>
+        <br>
+        <div *ngIf="payLoad" class="form-row">
+          <strong>Saved the following values</strong><br>{{payLoad}}
+        </div>
+      </form>
+
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,379 @@
+[
+{  
+    "id": 1,  
+    "fieldname": "firstname",  
+    "code": "fn",  
+    "isActive": true, 
+    "isMandatory": true
+  },  
+  {  
+    "id": 2,  
+    "fieldname": "middlename",  
+    "code": "mn",  
+    "isActive": true, 
+    "isMandatory": true
+  },
+  {  
+    "id": 3,  
+    "fieldname": "lastname",  
+    "code": "ln",  
+    "isActive": true, 
+    "isMandatory": true
+   
+  } ,
+  {  
+    "id": 4,  
+    "fieldname": "address1",  
+    "code": "addr1",  
+    "isActive": true , 
+    "isMandatory": true
+  } ,
+  {  
+    "id": 5,  
+    "fieldname": "address2",  
+    "code": "addr2",  
+    "isActive": true , 
+    "isMandatory": true
+  } ,
+  {  
+    "id": 6,  
+    "fieldname": "gender",  
+    "code": "gr",  
+    "isActive": true, 
+    "isMandatory": true
+  } ,
+  {  
+    "id": 7,  
+    "fieldname": "dateofBirth",  
+    "code": "dob",  
+    "isActive": true , 
+    "isMandatory": true
+  } ,
+  {  
+    "id": 8,  
+    "fieldname": "city",  
+    "code": "cy",  
+    "isActive": true, 
+    "isMandatory": true 
+  } ,
+  {  
+    "id": 9,  
+    "fieldname": "state",  
+    "code": "st",  
+    "isActive": true,
+    "isMandatory": true  
+  } ,
+  {  
+    "id": 10,  
+    "fieldname": "country",  
+    "code": "coy",  
+    "isActive": true, 
+    "isMandatory": true
+  } ,
+  {  
+    "id": 11,  
+    "fieldname": "qualification",  
+    "code": "qa",  
+    "isActive": true, 
+    "isMandatory": true 
+    
+  } ,
+  {  
+    "id": 12,  
+    "fieldname": "mobileNum",  
+    "code": "mob",  
+    "isActive": true, 
+    "isMandatory": true
+  } ,
+  {  
+    "id": 13,  
+    "fieldname": "address3",  
+    "code": "addr3",  
+    "isActive": true, 
+    "isMandatory": true 
+  } ,
+  {  
+    "id": 14,  
+    "fieldname": "yearOfPassing",  
+    "code": "yop",  
+    "isActive": true , 
+    "isMandatory": true
+  }, 
+  {  
+    "id": 15,  
+    "fieldname": "designation",  
+    "code": "des",  
+    "isActive": true, 
+    "isMandatory": true 
+  }, 
+  {  
+    "id": 16,  
+    "fieldname": "residenceType",  
+    "code": "resType",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 17,  
+    "fieldname": "countryOfResidence",  
+    "code": "cor",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 18,  
+    "fieldname": "idType",  
+    "code": "id",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 19,  
+    "fieldname": "expiryDate",  
+    "code": "exDate",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 20,  
+    "fieldname": "placeOfBirth",  
+    "code": "pob",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 21,  
+    "fieldname": "nationality",  
+    "code": "nat",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 22,  
+    "fieldname": "occupationType",  
+    "code": "occType",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 23,  
+    "fieldname": "idNumber",  
+    "code": "idNum",  
+    "isActive": true, 
+    "isMandatory": true 
+  } , 
+  {  
+    "id": 24,  
+    "fieldname": "zipCode",  
+    "code": "zip",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  , 
+  {  
+    "id": 25,  
+    "fieldname": "emailid",  
+    "code": "email",  
+    "isActive": true, 
+    "isMandatory": true 
+  } ,
+  {  
+    "id": 26,  
+    "fieldname": "alternateMob",  
+    "code": "altermob",  
+    "isActive": true, 
+    "isMandatory": true 
+  },
+  {  
+    "id": 27,  
+    "fieldname": "building",  
+    "code": "build",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 28,  
+    "fieldname": "street",  
+    "code": "str",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 29,  
+    "fieldname": "locality",  
+    "code": "local",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 30,  
+    "fieldname": "cifNumber",  
+    "code": "cif",  
+    "isActive": true, 
+    "isMandatory": true 
+  }   ,
+  {  
+    "id": 31,  
+    "fieldname": "applicantTotalIncome",  
+    "code": "totalIncome",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 32,  
+    "fieldname": "applicantTotalExpense",  
+    "code": "totalExpense",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 33,  
+    "fieldname": "employmentType",  
+    "code": "empType",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 34,  
+    "fieldname": "employmentCategory",  
+    "code": "empcat",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 35,  
+    "fieldname": "employeeNumber",  
+    "code": "empNum",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 36,  
+    "fieldname": "officeName",  
+    "code": "office",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 37,  
+    "fieldname": "employmentStartDate",  
+    "code": "startDate",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 38,  
+    "fieldname": "employmentEndDate",  
+    "code": "endDate",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 39,  
+    "fieldname": "salary",  
+    "code": "sal",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 40,  
+    "fieldname": "interestIncome",  
+    "code": "intIncome",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 41,  
+    "fieldname": "bonus",  
+    "code": "bon",  
+    "isActive": true, 
+    "isMandatory": true 
+  }   ,
+  {  
+    "id": 42,  
+    "fieldname": "cashGifts",  
+    "code": "cashG",  
+    "isActive": true, 
+    "isMandatory": true 
+  }  ,
+  {  
+    "id": 43,  
+    "fieldname": "business",  
+    "code": "bus",  
+    "isActive": true, 
+    "isMandatory": true 
+  }  ,
+  {  
+    "id": 44,  
+    "fieldname": "pension",  
+    "code": "pen",  
+    "isActive": true, 
+    "isMandatory": true 
+  }  ,
+  {  
+    "id": 45,  
+    "fieldname": "monthlyIncomeRentals",  
+    "code": "monthlyIncome",  
+    "isActive": true, 
+    "isMandatory": true 
+  }  ,
+  {  
+    "id": 46,  
+    "fieldname": "monthlyIncomeOthers",  
+    "code": "incomeOthers",  
+    "isActive": true, 
+    "isMandatory": true 
+  } ,
+  {  
+    "id": 47,  
+    "fieldname": "monthlyIncomeTotal",  
+    "code": "incomeTotal",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 48,  
+    "fieldname": "savingDeposits",  
+    "code": "savings",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 49,  
+    "fieldname": "properties",  
+    "code": "property",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 50,  
+    "fieldname": "assetTotal",  
+    "code": "asstsTotal",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+  ,
+  {  
+    "id": 51,  
+    "fieldname": "fixedDeposits",  
+    "code": "fixedDep",  
+    "isActive": true, 
+    "isMandatory": true 
+  } 
+]
